@@ -1,0 +1,11 @@
+ALTER TABLE users
+  ADD COLUMN IF NOT EXISTS nationality VARCHAR(2),
+  ADD COLUMN IF NOT EXISTS phone_country_code VARCHAR(8),
+  ADD COLUMN IF NOT EXISTS phone_number VARCHAR(20),
+  ADD COLUMN IF NOT EXISTS phone_country_iso2 VARCHAR(2);
+
+ALTER TABLE registration_challenges
+  ADD COLUMN IF NOT EXISTS nationality VARCHAR(2),
+  ADD COLUMN IF NOT EXISTS phone_country_code VARCHAR(8),
+  ADD COLUMN IF NOT EXISTS phone_number VARCHAR(20),
+  ADD COLUMN IF NOT EXISTS phone_country_iso2 VARCHAR(2);

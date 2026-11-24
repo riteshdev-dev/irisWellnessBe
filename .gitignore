@@ -1,0 +1,62 @@
+# Dependencies
+node_modules/
+
+# Build files
+dist/
+build/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+.otp-dev.log
+npm-debug.log*
+
+# Uploaded files
+uploads/
+
+# Course PDFs
+public/course/*
+
+# Course videos
+public/video/*
+
+# User generated certificates
+public/documents/*
+
+# Preserve empty folders
+!public/course/.gitkeep
+!public/video/.gitkeep
+!public/documents/.gitkeep
+
+# Temporary files
+tmp/
+temp/
+
+# Database backups
+backups/
+*.dump
+*.backup
+
+# Security keys
+*.pem
+*.key
+*.p12
+
+# Testing
+coverage/
+
+# TypeScript
+*.tsbuildinfo
+
+# Editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
