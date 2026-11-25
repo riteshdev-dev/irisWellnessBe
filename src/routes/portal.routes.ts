@@ -60,6 +60,7 @@ import {
   userDashboardController,
   userStatusController,
   verifyCertificateController,
+  certificateQrController,
 } from "../controllers/portal.controller.js";
 import { authenticate } from "../middleware/authenticate.js";
 import { authorize } from "../middleware/authorize.js";
@@ -67,6 +68,7 @@ import { authorize } from "../middleware/authorize.js";
 const portalRouter = Router();
 
 portalRouter.get("/certificates/verify/:code", verifyCertificateController);
+portalRouter.get("/certificates/qr/:code", certificateQrController);
 portalRouter.get(["/media/:filename", "/media/{*filename}"], authenticate, mediaController);
 portalRouter.get("/documents/:userFolder/:filename", authenticate, documentAccessController);
 portalRouter.get("/public/documents/:userFolder/:filename", authenticate, documentAccessController);

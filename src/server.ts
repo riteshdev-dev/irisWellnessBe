@@ -7,5 +7,5 @@ assertEnv();
 const port = env().port;
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Iris Wellness API server running on port ${port}`);
 });

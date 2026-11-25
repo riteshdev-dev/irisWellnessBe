@@ -1,5 +1,5 @@
 {
-  "name": "spatherapistbe",
+  "name": "iriswellness-be",
   "version": "1.0.0",
   "type": "module",
   "description": "",
@@ -19,6 +19,7 @@
     "cors": "^2.8.6",
     "dotenv": "^18.0.10",
     "express": "^5.3.0",
+    "groq-sdk": "^1.6.0",
     "jsonwebtoken": "^9.0.3",
     "libphonenumber-js": "^1.13.16",
     "multer": "^2.5.0",
