@@ -12,7 +12,7 @@ export interface OtpRecipient {
 }
 
 function messageBody(code: string, minutes: number): string {
-  return `Your Spa Therapist Portal verification code is ${code}. It expires in ${minutes} minutes. Do not share this code.`;
+  return `Your Iris Wellness verification code is ${code}. It expires in ${minutes} minutes. Do not share this code.`;
 }
 
 function assertEmailConfig(): void {
@@ -42,7 +42,7 @@ async function sendEmail(recipient: OtpRecipient, code: string): Promise<void> {
   await transport.sendMail({
     from: smtp.from,
     to: recipient.email,
-    subject: "Your Spa Therapist Portal verification code",
+    subject: "Your Iris Wellness verification code",
     text: `Hello ${recipient.name},\n\n${messageBody(code, otpExpiresMinutes)}\n`,
   });
 }

@@ -264,7 +264,7 @@ export async function certificatePdf(certificate: {
 
     document.rect(28, 28, 539, 786).lineWidth(1.5).strokeColor("#1e463c").stroke();
     document.rect(38, 38, 519, 766).lineWidth(0.4).strokeColor("#9c7b52").stroke();
-    document.fillColor("#1e463c").font("Times-Bold").fontSize(28).text("Spa Therapist Portal", 56, 92, {
+    document.fillColor("#1e463c").font("Times-Bold").fontSize(28).text("Iris Wellness", 56, 92, {
       align: "center",
     });
     document.fillColor("#9c7b52").font("Times-Roman").fontSize(13).text("Certificate of Completion", {

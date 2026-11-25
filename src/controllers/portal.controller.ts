@@ -3,6 +3,8 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import type { Request, Response } from "express";
 import multer from "multer";
+import QRCode from "qrcode";
+import { env } from "../config/env.js";
 import * as assessments from "../models/assessment.model.js";
 import * as catalog from "../models/catalog.model.js";
 import * as learning from "../models/learning.model.js";
@@ -262,6 +264,27 @@ export const verifyCertificateController = asyncHandler(async (req, res) => {
       issuedAt: certificate.issued_at,
     },
   });
+});
+
+export const certificateQrController = asyncHandler(async (req, res) => {
+  const code = typeof req.params.code === "string" ? req.params.code.trim() : "";
+  if (!code) {
+    res.status(400).json({ success: false, message: "Certificate code is required." });
+    return;
+  }
+  const clientOrigin = env().clientOrigin || "http://localhost:5173";
+  const verifyUrl = `${clientOrigin}/certificates/verify/${encodeURIComponent(code)}`;
+  const buffer = await QRCode.toBuffer(verifyUrl, {
+    width: 220,
+    margin: 1,
+    color: {
+      dark: "#1e463c",
+      light: "#ffffff",
+    },
+  });
+  res.setHeader("Content-Type", "image/png");
+  res.setHeader("Cache-Control", "public, max-age=86400");
+  res.send(buffer);
 });
 
 export const adminDashboardController = asyncHandler(async (_req, res) => {
