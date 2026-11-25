@@ -10,6 +10,7 @@ import { errorHandler } from "./middleware/errorHandler.js";
 import adminRouter from "./routes/admin.routes.js";
 import authRouter from "./routes/auth.routes.js";
 import portalRouter from "./routes/portal.routes.js";
+// import aiRoutes from "./routes/ai.routes.js";
 
 const app = express();
 const clientOrigin = process.env.CLIENT_ORIGIN ?? "http://localhost:5173";
@@ -36,6 +37,7 @@ app.use(
 );
 console.log("========== APP.TS LOADED ==========");
 app.use(express.json({ limit: "256kb" }));
+// app.use("/api/ai", aiRoutes);
 app.use((req, res, next) => {
   console.log("BACKEND HIT:", req.method, req.originalUrl);
   next();
@@ -59,7 +61,7 @@ app.use((req, res, next) => {
 app.get("/", (_req, res) => {
   res.json({
     success: true,
-    message: "Spa Therapist API is running",
+    message: "Iris Wellness API is running",
   });
 });
 

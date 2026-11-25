@@ -1,6 +1,6 @@
-# Spa Therapist Certification Portal — Backend API (`spaTherapistBe`)
+# Iris Wellness — Backend API (`spaTherapistBe`)
 
-A high-performance, enterprise-grade RESTful API service powering the **Spa Therapist Certification Portal**, built with **Node.js**, **Express 5**, **TypeScript**, and **PostgreSQL**. The service provides secure authentication, role-based access control, curriculum streaming, online exam evaluation, automated PDF certificate generation with QR verification, media asset storage, and an administrative management suite.
+A high-performance, enterprise-grade RESTful API service powering **Iris Wellness**, built with **Node.js**, **Express 5**, **TypeScript**, and **PostgreSQL**. The service provides secure authentication, role-based access control, curriculum streaming, online exam evaluation, automated PDF certificate generation with QR verification, media asset storage, and an administrative management suite.
 
 ---
 
@@ -207,7 +207,7 @@ SMTP_PORT=587
 SMTP_SECURE=false
 SMTP_USER=your_email@gmail.com
 SMTP_PASS=your_app_specific_password
-SMTP_FROM="Spa Certification" <no-reply@spaportal.com>
+SMTP_FROM="Iris Wellness" <no-reply@iriswellness.com>
 ```
 
 > [!TIP]
@@ -507,4 +507,4 @@ public/documents/*
 
 ## License
 
-Confidential and proprietary. Developed for the Spa Therapist Certification Portal.
+Confidential and proprietary. Developed for Iris Wellness.
